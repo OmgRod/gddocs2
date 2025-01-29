@@ -12,16 +12,45 @@ export default defineConfig({
 				github: 'https://github.com/withastro/starlight',
 			},
 			sidebar: [
-				// {
-				// 	label: 'Guides',
-				// 	items: [
-				// 		{ label: 'Example Guide', slug: 'guides/example' },
-				// 	],
-				// },
-				// {
-				// 	label: 'Reference',
-				// 	autogenerate: { directory: 'reference' },
-				// },
+				{
+					label: 'Introduction',
+					link: '/'
+				},
+				{
+					label: 'Reference',
+					// autogenerate: { directory: 'reference' },
+					items: [
+						{ label: 'Official Songs', slug: 'reference/songs' },
+						{ label: 'Secrets', slug: 'reference/secrets' },
+						{ label: 'Keys', slug: 'reference/keys' },
+						{ label: 'Salts', slug: 'reference/salts' }
+					],
+				},
+				{
+					label: 'Request',
+					link: 'endpoints/generic'
+				},
+				{
+					label: 'Credits',
+					link: 'credits'
+				},
+				{
+					label: 'Server',
+					items: [
+						{ label: 'Comment', slug: 'resources/server/comment' },
+						{ label: 'Friend Request', slug: 'resources/server/friendrequest' },
+						{ label: 'Gauntlet', slug: 'resources/server/gauntlet' },
+						{ label: 'Hashes', slug: 'resources/server/hashes' },
+						{ label: 'Leaderboard Score', slug: 'resources/server/leaderboardscore' },
+						{ label: 'Level', slug: 'resources/server/level' },
+						{ label: 'List', slug: 'resources/server/list' },
+						{ label: 'Map Pack', slug: 'resources/server/mappack' },
+						{ label: 'Message', slug: 'resources/server/message' },
+						{ label: 'Song', slug: 'resources/server/song' },
+						{ label: 'User', slug: 'resources/server/user' },
+						{ label: 'Restore', slug: 'resources/server/restore' }
+					]
+				}
 			],
 			defaultLocale: 'en',
 			locales: {
@@ -34,8 +63,7 @@ export default defineConfig({
 				  lang: 'pt',
 				},
 			},
-		}),
-	, mdx()],
+		}), mdx()],
 	vite: {
         resolve: {
             alias: {
