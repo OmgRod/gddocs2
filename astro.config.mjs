@@ -50,6 +50,18 @@ export default defineConfig({
 						{ label: 'User', slug: 'resources/server/user' },
 						{ label: 'Restore', slug: 'resources/server/restore' }
 					]
+				},
+				{
+					label: 'Client',
+					items: [
+						{ label: 'Gamesave', items: [
+							{ label: 'Gamesave', slug: 'resources/client/gamesave' },
+							{ label: 'Encoder Keys', slug: 'resources/client/gamesave/kcek' },
+							{ label: 'GS Values', slug: 'resources/client/gamesave/gs_value' },
+							{ label: 'GLM', slug: 'resources/client/gamesave/glm' },
+							{ label: 'Value Keeper', slug: 'resources/client/gamesave/valuekeeper' },
+						] }
+					]
 				}
 			],
 			defaultLocale: 'en',
