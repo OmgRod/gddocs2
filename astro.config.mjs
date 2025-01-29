@@ -6,7 +6,7 @@ import mdx from '@astrojs/mdx';
 // https://astro.build/config
 export default defineConfig({
  site: 'https://gddocs.omgrod.me',
- base: 'gddocs2'
+ base: 'gddocs2',
 	integrations: [
 		starlight({
 			title: 'GDDocs',
