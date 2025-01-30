@@ -73,9 +73,9 @@ export default defineConfig({
 					]
 				}
 			],
-			defaultLocale: 'en',
+			defaultLocale: 'root',
 			locales: {
-				en: {
+				root: {
 				  label: 'English',
 				  lang: 'en',
 				},
