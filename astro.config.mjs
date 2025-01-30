@@ -62,6 +62,13 @@ export default defineConfig({
 							{ label: 'GS Values', slug: 'resources/client/gamesave/gs_value' },
 							{ label: 'GLM', slug: 'resources/client/gamesave/glm' },
 							{ label: 'Value Keeper', slug: 'resources/client/gamesave/valuekeeper' },
+							{ label: 'Game Variables', slug: 'resources/client/gamesave/gv' },
+							{ label: 'Achievements', slug: 'resources/client/gamesave/achievement' },
+							{ label: 'Quests', slug: 'resources/client/gamesave/quests' },
+							{ label: 'Platformer UI', slug: 'resources/client/gamesave/dpad' },
+							{ label: 'Smart Templates', slug: 'resources/client/gamesave/template' },
+							{ label: 'Lists', slug: 'resources/client/gamesave/list' },
+							{ label: 'Enumerations', slug: 'resources/client/gamesave/enums' },
 						] }
 					]
 				}
