@@ -1,0 +1,33 @@
+---
+title: 'Chaves'
+template: doc
+---
+
+> O Geometry Dash utiliza o [Cifra XOR](topics/encryption/xor.md) combinado com [codificação base64](topics/encryption/base64.md) para proteger várias strings dentro do cliente. Múltiplas chaves são usadas para proteger diferentes aspetos do jogo.
+
+## Chaves XOR
+
+| Chave   | Uso                          | Tipo XOR |
+| :------ | :--------------------------- | :------- |
+| `11`    | Dados de Salvamento do Jogador | Singular |
+| `14251` | Mensagens do Jogador          | Ciclado  |
+| `19283` | Códigos do Cofre              | Ciclado  |
+| `19847` | Desafios Diários             | Ciclado  |
+| `26364` | Senha do Nível               | Ciclado  |
+| `29481` | Integridade dos Comentários  | Ciclado  |
+| `37526` | Senha da Conta               | Ciclado  |
+| `39673` | Integridade da Tabela de Líderes do Nível | Ciclado  |
+| `41274` | Integridade do Nível         | Ciclado  |
+| `48291` | Dados de Carregamento        | Ciclado  |
+| `52832` | Multijogador                  | Ciclado  |
+| `57709` | Segredo da Biblioteca de Música/SFX | Ciclado  |
+| `58281` | Integridade da Avaliação     | Ciclado  |
+| `59182` | Recompensas do Cofre         | Ciclado  |
+| `85271` | Integridade do Envio de Estatísticas | Ciclado  |
+
+## Tipos de XOR
+
+> Existem **dois** modos como o Geometry Dash aplica a [Cifra XOR](topics/encryption/xor.md) às strings - **Estático** e **Ciclado**
+>
+> - Cifras Estáticas aplicam a chave tal como está, sem alterações sendo feitas à chave em si.
+> - Cifras Cicladas percorrem cada valor da chave um a um e depois repetem o ciclo quando chegam ao fim.

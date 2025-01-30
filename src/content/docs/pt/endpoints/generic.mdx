@@ -1,0 +1,40 @@
+---
+title: 'Informações Importantes'
+template: doc
+---
+
+> Ao interagir com a API Privada do Geometry Dash, existe um conjunto de regras que deve seguir. Caso não siga estas regras, ocorrerá o erro `-1`.
+
+## Enviando requisições
+
+Para fazer uma requisição bem-sucedida aos servidores do Geometry Dash, há alguns fatores a considerar:
+
+- Cloudflare
+- Tipo de Requisição
+- Limites de Taxa
+
+**Cloudflare** \
+Os servidores do Geometry Dash são protegidos por um serviço chamado [Cloudflare](https://www.cloudflare.com/). Para enviar uma requisição bem-sucedida, é essencial contornar o Cloudflare. Para contornar o Cloudflare, há dois passos:
+
+- Deve enviar a requisição para o subdomínio `www.`
+- Deve enviar a requisição com um user-agent vazio
+
+Se não seguir estes passos, o Cloudflare bloqueará a requisição e você receberá o código de erro HTTP: `1020`.
+
+**Tipo de Requisição** \
+Em 99% dos casos, o Geometry Dash exige que envie uma requisição do tipo `POST`. Os parâmetros da requisição requerem o seguinte tipo de conteúdo: `Content-Type: application/x-www-form-urlencoded`. 
+- Os parâmetros necessários serão detalhados nas suas respetivas secções.
+
+**Limites de Taxa** \
+Uma coisa a ter em mente é o número de requisições que envia num determinado momento. Enviar muitas requisições resultará em ser limitado quanto à taxa e não poderá enviar mais requisições durante um certo período. Como o número de requisições necessário para começar a limitação da taxa muda, não podemos fornecer números exatos, mas, a partir de 3 de Novembro de 2023, são aproximadamente:
+- 20x downloadGJLevel por minuto, todos os outros endpoints de recuperação de dados - 2 por segundo
+
+No entanto, existem também alguns limites a longo prazo aplicados em cima disso.
+
+## **Método Alternativo**
+> A partir de 31 de Maio de 2023, existe um método alternativo utilizando IPv6 para interagir com os servidores
+
+```py
+#>curl http://[2600:3c03::f03c:91ff:fe69:863b]/database/getGJLevels21.php -X POST -d secret=Wmfd2893gb7
+1:6508283:2:ReTraY:5:3:6:4993756:8:10:9:10:10:71657392:12:0:13:21:14:6541047:17::43:3:25::18:2:19:7730:42:0:45:20000:3:VGhhbmtzIGZvciBwbGF5aW5nIEdlb21ldHJ5IERhc2g=:15:3:30:0:31:0:37:3:38:1:39:2:46:1:47:2:35:557117|...
+```

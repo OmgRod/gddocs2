@@ -12,12 +12,13 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
- site: 'https://gddocs.omgrod.me',
+ site: 'https://omgrod.me/gddocs2',
  base: 'gddocs2',
     integrations: [starlight({
         title: 'GD Docs',
         social: {
-            github: 'https://github.com/withastro/starlight',
+            github: 'https://github.com/OmgRod/gddocs2',
+
         },
         sidebar: [
             {
@@ -223,7 +224,20 @@ export default defineConfig({
               lang: 'pt',
             },
         },
-        }), mdx(), tailwind(), db(), markdoc(), partytown(), sitemap()],
+        }), mdx({
+			layouts: {
+				default: '@/layouts/Layout.astro'
+			}
+		}), tailwind(), db(), markdoc(), partytown(),
+		sitemap({
+			i18n: {
+				defaultLocale: 'root', // All urls that don't contain `es` or `fr` after `https://stargazers.club/` will be treated as default locale, i.e. `en`
+					locales: {
+					root: 'en-US', // The `defaultLocale` value must present in `locales` keys
+					pt: 'pt-PT',
+				},
+			}
+		})],
     vite: {
         resolve: {
             alias: {
