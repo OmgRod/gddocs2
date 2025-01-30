@@ -10,6 +10,8 @@ import markdoc from '@astrojs/markdoc';
 import partytown from '@astrojs/partytown';
 import sitemap from '@astrojs/sitemap';
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
  site: 'https://omgrod.me/gddocs2',
@@ -18,7 +20,9 @@ export default defineConfig({
         title: 'GD Docs',
         social: {
             github: 'https://github.com/OmgRod/gddocs2',
-
+            twitter: 'https://twitter.com/0mgRod',
+            discord: 'https://discord.gg/EXkwkm2sZ9',
+            youtube: 'https://youtube.com/@OmgRodYT'
         },
         sidebar: [
             {
@@ -225,19 +229,18 @@ export default defineConfig({
             },
         },
         }), mdx({
-			layouts: {
-				default: '@/layouts/Layout.astro'
-			}
-		}), tailwind(), db(), markdoc(), partytown(),
-		sitemap({
-			i18n: {
-				defaultLocale: 'root', // All urls that don't contain `es` or `fr` after `https://stargazers.club/` will be treated as default locale, i.e. `en`
-					locales: {
-					root: 'en-US', // The `defaultLocale` value must present in `locales` keys
-					pt: 'pt-PT',
-				},
-			}
-		})],
+            layouts: {
+                default: '@/layouts/Layout.astro'
+            }
+        }), tailwind(), db(), markdoc(), partytown(), sitemap({
+        i18n: {
+            defaultLocale: 'root', // All urls that don't contain `es` or `fr` after `https://stargazers.club/` will be treated as default locale, i.e. `en`
+                locales: {
+                root: 'en-US', // The `defaultLocale` value must present in `locales` keys
+                pt: 'pt-PT',
+            },
+        }
+		}), react()],
     vite: {
         resolve: {
             alias: {
