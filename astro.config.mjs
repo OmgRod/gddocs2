@@ -212,6 +212,104 @@ export default defineConfig({
                                 slug: 'resources/client/gamesave/enums' 
                             },
                         ] 
+                    },
+                    {
+                        label: 'Level',
+                        translations: { pt: 'Nível' },
+                        items: [
+                            {
+                                label: 'Level',
+                                translations: { pt: 'Nível' },
+                                slug: 'resources/client/level/level'
+                            },
+                            {
+                                label: 'Capacity String',
+                                slug: 'resources/client/level/capacity-string'
+                            },
+                            {
+                                label: 'Enumerations',
+                                slug: 'resources/client/level/enumerations'
+                            },
+                            {
+                                label: 'Level Colors',
+                                slug: 'resources/client/level/level-colors'
+                            },
+                            {
+                                label: 'Start Level String',
+                                slug: 'resources/client/level/level-start'
+                            },
+                            {
+                                label: 'Level String',
+                                slug: 'resources/client/level/level-string'
+                            },
+                            {
+                                label: 'Color String',
+                                slug: 'resources/client/level/color-string'
+                            },
+                            {
+                                label: 'Guideline String',
+                                slug: 'resources/client/level/guideline-string'
+                            },
+                            {
+                                label: 'Particle String',
+                                slug: 'resources/client/level/particle-string'
+                            }
+                        ]
+                    },
+                    {
+                        label: 'Music Library',
+                        slug: 'resources/client/musiclibrary'
+                    },
+                    {
+                        label: 'SFX Library',
+                        slug: 'resources/client/sfxlibrary'
+                    }
+                ]
+            },
+            {
+                label: 'Endpoints',
+                items: [
+                    {
+                        label: 'Accounts',
+                        items: [
+                            {
+                                label: 'backupGJAccountNew',
+                                slug: 'endpoints/accounts/backupgjaccountnew'
+                            },
+                            {
+                                label: 'syncGJAccountNew',
+                                slug: 'endpoints/accounts/syncgjaccountnew'
+                            },
+                            {
+                                label: 'loginGJAccount',
+                                slug: 'endpoints/accounts/logingjaccount'
+                            },
+                            {
+                                label: 'registerGJAccount',
+                                slug: 'endpoints/accounts/registergjaccount'
+                            },
+                            {
+                                label: 'updateGJAccSettings20',
+                                slug: 'endpoints/accounts/updategjaccsettings20'
+                            }
+                        ]
+                    },
+                    {
+                        label: 'Users',
+                        items: [
+                            {
+                                label: 'getGJScores20',
+                                slug: 'endpoints/users/getgjscores20'
+                            },
+                            {
+                                label: 'getGJUserInfo20',
+                                slug: 'endpoints/users/getgjuserinfo20'
+                            },
+                            {
+                                label: 'getGJUsers20',
+                                slug: 'endpoints/users/getgjusers20'
+                            }
+                        ]
                     }
                 ]
             }
