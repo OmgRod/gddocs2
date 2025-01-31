@@ -308,6 +308,10 @@ export default defineConfig({
                             {
                                 label: 'getGJUsers20',
                                 slug: 'endpoints/users/getgjusers20'
+                            },
+                            {
+                                label: 'updateGJUserScore22',
+                                slug: 'endpoints/users/updategjuserscore22'
                             }
                         ]
                     }
