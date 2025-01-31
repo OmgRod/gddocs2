@@ -338,8 +338,8 @@ export default defineConfig({
 			i18n: {
 				defaultLocale: 'root', // All urls that don't contain `es` or `fr` after `https://stargazers.club/` will be treated as default locale, i.e. `en`
 					locales: {
-					root: 'en-US', // The `defaultLocale` value must present in `locales` keys
-					pt: 'pt-PT',
+					root: 'en-us', // The `defaultLocale` value must present in `locales` keys
+					pt: 'pt-pt',
 				},
 			}
 		})],
