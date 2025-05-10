@@ -12,8 +12,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
- site: 'https://omgrod.me/gddocs2',
- base: 'gddocs2',
+ site: 'https://gddocs2.omgrod.me/',
     integrations: [starlight({
         title: 'GD Docs',
         social: {
