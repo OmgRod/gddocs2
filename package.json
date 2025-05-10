@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/db": "^0.14.6",
-    "@astrojs/markdoc": "^0.12.8",
+    "@astrojs/markdoc": "^0.12.11",
     "@astrojs/mdx": "^4.0.8",
     "@astrojs/partytown": "^2.1.3",
     "@astrojs/react": "^4.2.0",
@@ -20,7 +20,7 @@
     "@astrojs/tailwind": "^6.0.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
-    "astro": "^5.1.5",
+    "astro": "^5.7.12",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sharp": "^0.32.5",
